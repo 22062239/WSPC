@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Services</title>
+    <link rel="stylesheet" href="/static/PC/CSS/home.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <nav>
+        <ol>
+            <li><a class="arrow" href="{% url 'home' %}"><i class="fas fa-arrow-alt-right"></i>Home</a></li>
+            <li><a class="arrow" href="{% url 'services' %}"> <i class="fas fa-arrow-alt-right"></i>Services</a></li>
+            <li><a class="arrow" href="{% url 'about' %}"> <i class="fas fa-arrow-alt-right"></i>About</a></li>
+            <li><a class="arrow" href="{% url 'contact' %}"><i class="fas fa-arrow-alt-right"></i>Contact</a></li>
+        </ol>
+    </nav>
+
+    <div class="hero">
+        <h1>Welcome to PC Services</h1>
+        <p>We specialize in enhancing your computer's performance and lifespan.</p>
+    </div>
+
+    <div class="services">
+        <div class="service-item pc-cleaning">
+            <div class="service-box">
+                <h2>PC Cleaning - $35</h2>
+                <p>Ensure your PC operates at its best with our comprehensive cleaning service.</p>
+                <a href="{% url 'services' %}" class="btn">Learn More</a>
+            </div>
+        </div>
+
+        <div class="service-item pc-optimization">
+            <div class="service-box">
+                <h2>PC Optimization - $50</h2>
+                <p>Optimize your PC's performance with our comprehensive optimization service.</p>
+                <a href="{% url 'services' %}" class="btn">Learn More</a>
+            </div>
+        </div>
+
+        <div class="service-item pc-upgrade">
+            <div class="service-box">
+                <h2>PC Upgrade - $75</h2>
+                <p>Enhance your PC's capabilities with our expert upgrade service.</p>
+                <a href="{% url 'services' %}" class="btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 PC Services. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

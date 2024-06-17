@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="/static/PC/css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    {% load static %}
+
+    <nav>
+        <ol>
+            <li><a class="arrow" href="{% url 'home' %}"><i class="fas fa-arrow-alt-right"></i>Home</a></li>
+            <li><a class="arrow" href="{% url 'services' %}"> <i class="fas fa-arrow-alt-right"></i>Services</a></li>
+            <li><a class="arrow" href="{% url 'about' %}"> <i class="fas fa-arrow-alt-right"></i>About</a></li>
+            <li><a class="arrow" href="{% url 'contact' %}"><i class="fas fa-arrow-alt-right"></i>Contact</a></li>
+            
+        </ol>
+    </nav>
+
+    <div class="hero">
+        <h1>About Us</h1>
+    </div>
+
+    <div class="about-us">
+        <div class="about-item">
+            <div class="about-box">
+                <h2>Our Story</h2>
+                <p>Founded in 2020, PC Services began with a mission to provide top-notch computer maintenance and
+                    upgrade services. Our passion for technology drives us to offer comprehensive solutions that meet
+                    the unique needs of each client. We started as a small team of tech enthusiasts, and have since
+                    grown into a trusted service provider in the community.</p>
+
+            </div>
+        </div>
+
+        <div class="about-item">
+            <div class="about-box">
+                <h2>Our Mission</h2>
+                <p>Our mission is to deliver reliable, efficient, and affordable computer services to our clients. We
+                    are dedicated to ensuring your technology operates at its best, whether through cleaning,
+                    optimization, or upgrades. We believe in the power of technology to enhance productivity and
+                    connectivity, and we are committed to helping you achieve that through our services.</p>
+
+            </div>
+        </div>
+
+        <div class="about-item">
+            <div class="about-box">
+                <h2>Meet the Team</h2>
+                <p>Our team is composed of experienced technicians and friendly customer service representatives who are
+                    here to help you with all your computer needs. Each member of our team brings a wealth of knowledge
+                    and a passion for technology, ensuring that you receive the best service possible.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 PC Services. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

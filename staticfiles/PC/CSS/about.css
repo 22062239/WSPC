@@ -1,0 +1,32 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    line-height: 1.6;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    font-family: 'Press Start 2P';
+}
+
+nav ol {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ol li {
+    margin: 0 10px;
+}

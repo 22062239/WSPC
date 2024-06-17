@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block title %}
+    <title>PC</title>
+    {% endblock %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'PC/CSS/home.css' %}">
+   
+
+</head>
+
+<body>
+    <nav>
+        <ol>
+            <li><a class="arrow" href="{% url 'home' %}"><i class="fas fa-arrow-alt-right"></i>Home</a></li>
+            <li><a class="arrow" href="{% url 'services' %}"> <i class="fas fa-arrow-alt-right"></i>Services</a></li>
+            <li><a class="arrow"><i class="fas fa-arrow-alt-right"></i>About</a></li>
+            <li><a class="arrow"><i class="fas fa-arrow-alt-right"></i>Contact</a></li>
+        </ol>
+    </nav>
+
+
+
+
+    {% block content %}
+    <!-- Default content goes here -->
+    {% endblock %}
+
+
+
+</body>
+
+</html>

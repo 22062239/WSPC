@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="/static/PC/css/services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    {% load static %}
+
+    <nav>
+        <ol>
+            <li><a class="arrow" href="{% url 'home' %}"><i class="fas fa-arrow-alt-right"></i>Home</a></li>
+            <li><a class="arrow" href="{% url 'services' %}"> <i class="fas fa-arrow-alt-right"></i>Services</a></li>
+            <li><a class="arrow" href="{% url 'about' %}"> <i class="fas fa-arrow-alt-right"></i>About</a></li>
+            <li><a class="arrow" href="{% url 'contact' %}"><i class="fas fa-arrow-alt-right"></i>Contact</a></li>
+        </ol>
+    </nav>
+
+    <div class="hero">
+        <h1>Our Services</h1>
+    </div>
+
+    <div class="services">
+        <div class="service-item pc-cleaning">
+            <div class="service-box">
+                <h2>PC Cleaning - $35</h2>
+                <p>Ensure your PC operates at its best with our comprehensive cleaning service. We meticulously remove dust and debris from internal components, including your keyboard, mouse, and external surfaces. Our expert technician also verify your cooling system's efficiency to prevent overheating and maintain optimal performance.</p>
+                <h3>What's Included:</h3>
+                <ul>
+                    <li>Removal of dust and debris from internal components</li>
+                    <li>Cleaning of keyboard, mouse, and external surfaces</li>
+                    <li>Verification of cooling system efficiency</li>
+                </ul>
+                <h3>Benefits:</h3>
+                <ul>
+                    <li>Improved performance and reliability</li>
+                    <li>Extended lifespan of hardware components</li>
+                    <li>Enhanced user experience with faster response times</li>
+                </ul>
+                <img src="{% static 'PC/images/sickpc.jpg' %}" alt="My image" class="service-image">
+            </div>
+        </div>
+
+        <div class="service-item pc-optimization">
+            <div class="service-box">
+                <h2>PC Optimization - $50</h2>
+                <p>Optimize your PC's performance with our comprehensive optimization service. We conduct thorough system performance assessments and fine-tuning, remove unnecessary files and programs, optimize startup processes, and perform registry cleaning and defragmentation to ensure your system runs smoothly.</p>
+                <h3>What's Included:</h3>
+                <ul>
+                    <li>System performance assessment and tuning</li>
+                    <li>Removal of unnecessary files and programs</li>
+                    <li>Startup optimization</li>
+                    <li>Registry cleaning and defragmentation</li>
+                </ul>
+                <h3>Benefits:</h3>
+                <ul>
+                    <li>Faster boot times and overall performance</li>
+                    <li>Increased storage space</li>
+                    <li>Improved system stability</li>
+                </ul>
+                <img src="{% static 'PC/images/fast.png' %}" alt="My image" class="service-image">
+            </div>
+        </div>
+
+        <div class="service-item pc-upgrade">
+            <div class="service-box">
+                <h2>PC Upgrade - $75</h2>
+                <p>Enhance your PC's capabilities with our expert upgrade service. We provide personalized hardware upgrade consultations, meticulous installation of new components, thorough system compatibility checks, and performance testing of new hardware to ensure optimal functionality.</p>
+                <h3>What's Included:</h3>
+                <ul>
+                    <li>Hardware upgrade consultation</li>
+                    <li>Installation of new components</li>
+                    <li>System compatibility check</li>
+                    <li>Performance testing of new hardware</li>
+                </ul>
+                <h3>Benefits:</h3>
+                <ul>
+                    <li>Enhanced system performance</li>
+                    <li>Support for newer software and applications</li>
+                    <li>Extended overall lifespan of your PC</li>
+                </ul>
+                <img src="{% static 'PC/images/upgrade.jpg' %}" alt="My image" class="service-image">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 PC Services. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

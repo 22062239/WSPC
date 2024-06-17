@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Assuming your CSS file path is correct -->
+    <link rel="stylesheet" href="/static/PC/css/contact.css">
+</head>
+
+<body>
+    <nav>
+        <ol>
+            <li><a class="arrow" href="{% url 'home' %}"><i class="fas fa-arrow-alt-right"></i>Home</a></li>
+            <li><a class="arrow" href="{% url 'services' %}"> <i class="fas fa-arrow-alt-right"></i>Services</a></li>
+            <li><a class="arrow" href="{% url 'about' %}"><i class="fas fa-arrow-alt-right"></i>About</a></li>
+            <li><a class="arrow" href="{% url 'contact' %}"><i class="fas fa-arrow-alt-right"></i>Contact</a></li>
+        </ol>
+    </nav>
+
+    <div class="hero">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Whether you have a question about our services, need assistance, or just want to talk, we want to know what's on your mind.</p>
+    </div>
+
+    <div class="contact-form">
+        <!-- Corrected form structure -->
+        <form id="contactForm" method="POST" action="{% url 'contact' %}">
+            {% csrf_token %}
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" ><br>
+            <div id="fullNameError" class="error"></div>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" ><br>
+            <div id="emailError" class="error"></div>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone"><br>
+            <div id="phoneError" class="error"></div>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject"><br>
+            <div id="subjectError" class="error"></div>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"  rows="10" cols="30"></textarea><br>
+            <div id="messageError" class="error"></div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 PC Services. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to validate the form
+        function validateForm(event) {
+            event.preventDefault(); // Prevent form submission for demonstration
+
+            // Reset previous error messages
+            clearErrorMessages();
+
+            // Validation logic for each field
+            var fullName = document.getElementById('fullName').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var phone = document.getElementById('phone').value.trim();
+            var subject = document.getElementById('subject').value.trim();
+            var message = document.getElementById('message').value.trim();
+
+            var isValid = true;
+
+            // Validate Full Name
+            if (fullName === '') {
+                displayError('fullName', 'Please enter your full name.');
+                isValid = false;
+            } else if (!isValidFullName(fullName)) {
+                displayError('fullName', 'Full name should only contain letters and spaces.');
+                isValid = false;
+            }
+
+            // Validate Email
+            if (email === '') {
+                displayError('email', 'Please enter your email address.');
+                isValid = false;
+            } else if (!isValidEmail(email)) {
+                displayError('email', 'Please enter a valid email address.');
+                isValid = false;
+            }
+
+            // Validate Phone (optional)
+            if (phone !== '' && !isValidPhone(phone)) {
+                displayError('phone', 'Please enter a valid phone number.');
+                isValid = false;
+            }
+
+            // Validate Subject (optional)
+            // No specific validation required for Subject field
+
+            // Validate Message
+            if (message === '') {
+                displayError('message', 'Please enter your message.');
+                isValid = false;
+            }
+
+            // Allow form submission if valid
+            if (isValid) {
+                document.getElementById('contactForm').submit();
+            }
+        }
+
+        // Function to display error messages
+        function displayError(fieldId, message) {
+            var errorElement = document.getElementById(fieldId + 'Error');
+            errorElement.textContent = message;
+        }
+
+        // Function to clear all error messages
+        function clearErrorMessages() {
+            var errorElements = document.getElementsByClassName('error');
+            for (var i = 0; i < errorElements.length; i++) {
+                errorElements[i].textContent = '';
+            }
+        }
+
+        // Function to validate email format using regex
+        function isValidEmail(email) {
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Function to validate phone number using the previously defined regex pattern
+        function isValidPhone(phone) {
+            var phoneRegex = /^\({0,1}((0|\+61)(2|4|3|7|8)){0,1}\){0,1}(\ |-){0,1}[0-9]{2}(\ |-){0,1}[0-9]{2}(\ |-){0,1}[0-9]{1}(\ |-){0,1}[0-9]{3}$/;
+            return phoneRegex.test(phone);
+        }
+
+        // Function to check if full name contains only letters and spaces
+        function isValidFullName(name) {
+            var nameRegex = /^[A-Za-z\s]+$/;
+            return nameRegex.test(name);
+        }
+
+        // Event listener for form submission
+        document.getElementById('contactForm').addEventListener('submit', validateForm);
+
+    </script>
+
+</body>
+
+</html>
