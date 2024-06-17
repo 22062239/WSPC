@@ -12,7 +12,7 @@
 </head>
 
 <body>
-
+{% load static %}
     <nav>
         <ol>
             <li><a class="arrow" href="{% url 'home' %}"><i class="fas fa-arrow-alt-right"></i>Home</a></li>
@@ -21,11 +21,13 @@
             <li><a class="arrow" href="{% url 'contact' %}"><i class="fas fa-arrow-alt-right"></i>Contact</a></li>
         </ol>
     </nav>
-
+    
     <div class="hero">
-        <h1>Welcome to PC Services</h1>
-        <p>We specialize in enhancing your computer's performance and lifespan.</p>
+        <h1>Welcome to</h1>
+        <img style="width: 30%; height: 30%;" src="{%static 'PC\images\Warragamba & silverdale.png'%}">
+        <p>Where we specialize in enhancing your computer's performance and lifespan.</p>
     </div>
+    <h1 style="text-align: center;">Featured Services</h1>
 
     <div class="services">
         <div class="service-item pc-cleaning">
