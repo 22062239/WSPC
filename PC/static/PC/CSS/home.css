@@ -1,5 +1,5 @@
 @import "https://fonts.googleapis.com/css?family=Press%20Start%202P";
-
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 /* Reset default styles */
 * {
     margin: 0;
@@ -12,17 +12,17 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Space Grotesk';
     background-color: #f0f0f0;
     line-height: 1.6;
 }
 
 nav {
-    position: fixed;
+    
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: black;
     padding: 10px 0;
     font-family: 'Press Start 2P';
 }
@@ -38,6 +38,7 @@ nav ol {
 
 nav ol li {
     margin: 20px;
+    
 }
 
 a {
@@ -118,12 +119,14 @@ a {
     flex-wrap: wrap;
     margin: 40px auto;
     max-width: 1200px;
+    
 }
 
 .service-item {
     flex: 1;
     margin: 20px;
     min-width: 280px;
+    
 }
 
 .service-box {
@@ -132,18 +135,21 @@ a {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    height: 300px; /* Example fixed height */
 }
 
 .service-item h2 {
     font-size: 2em;
     color: #007bff;
     margin-bottom: 10px;
+    font-family: 'Space Grotesk';
 }
 
 .service-item p {
     font-size: 1.1em;
     color: #555;
     margin-bottom: 20px;
+    font-family: 'Space Grotesk';
 }
 
 .btn {
@@ -168,4 +174,9 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+    font-family: 'Space Grotesk';
+}
+
+.special {
+    list-style-type: none;
 }
