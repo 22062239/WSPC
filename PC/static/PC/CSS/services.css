@@ -1,4 +1,5 @@
 @import "https://fonts.googleapis.com/css?family=Press%20Start%202P";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 /* Reset default styles */
 * {
@@ -12,13 +13,13 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Space Grotesk';
     background-color: #f0f0f0;
     line-height: 1.6;
 }
 
 nav {
-    
+
     top: 0;
     left: 0;
     width: 100%;
@@ -98,12 +99,14 @@ a {
     color: #fff;
     text-align: center;
     padding: 100px 20px;
+    font-family: 'Space Grotesk';
      /* Adjust for the fixed nav bar */
 }
 
 .hero h1 {
     font-size: 3em;
     margin-bottom: 20px;
+    font-family: 'Space Grotesk';
 }
 
 .services {
@@ -113,12 +116,14 @@ a {
     flex-wrap: wrap;
     margin: 40px auto;
     max-width: 1200px;
+    font-family: 'Space Grotesk';
 }
 
 .service-item {
     flex: 1;
     margin: 20px;
     min-width: 280px;
+    font-family: 'Space Grotesk';
 }
 
 .service-box {
@@ -127,24 +132,28 @@ a {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    font-family: 'Space Grotesk';
 }
 
 .service-item h2 {
     font-size: 2em;
     color: #007bff;
     margin-bottom: 10px;
+    font-family: 'Space Grotesk';
 }
 
 .service-item p {
     font-size: 1.1em;
     color: #555;
     margin-bottom: 20px;
+    font-family: 'Space Grotesk';
 }
 
 .service-item h3 {
     font-size: 1.5em;
     color: #007bff;
     margin-top: 20px;
+    font-family: 'Space Grotesk';
 }
 
 .service-item ul {
@@ -152,6 +161,7 @@ a {
     padding-left: 20px;
     text-align: left;
     margin-top: 10px;
+    font-family: 'Space Grotesk';
 }
 
 .service-image {
@@ -177,10 +187,13 @@ a {
 
 footer {
     background-color: #333;
-    color: #fff;
+    color: white;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
+    padding: 10px;
+    position: relative;
     bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk';
+    margin-top: auto;
 }

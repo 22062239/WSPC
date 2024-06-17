@@ -1,4 +1,5 @@
 @import "https://fonts.googleapis.com/css?family=Press%20Start%202P";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 /* Reset default styles */
 * {
@@ -12,7 +13,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Space Grotesk';
     background-color: #f0f0f0;
     line-height: 1.6;
 }
@@ -20,7 +21,7 @@ body {
 
 
 nav {
-    
+
     top: 0;
     left: 0;
     width: 100%;
@@ -102,14 +103,16 @@ a {
 
 footer {
     background-color: #333;
-    color: #fff;
+    color: white;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
+    padding: 10px;
+    position: relative;
     bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+    font-family: 'Space Grotesk';
 }
-
 
 
 .hero {
@@ -125,6 +128,7 @@ footer {
 .hero h1 {
     font-size: 3em;
     margin-bottom: 20px;
+    font-family: 'Space Grotesk';
 }
 
 .about-us {
@@ -132,6 +136,7 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 50px 20px;
+    font-family: 'Space Grotesk';
 }
 
 
@@ -141,6 +146,7 @@ footer {
     width: 100%;
     max-width: 800px;
     margin-bottom: 50px;
+    font-family: 'Space Grotesk';
 }
 
 .about-box {
@@ -148,6 +154,7 @@ footer {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Space Grotesk';
 }
 
 
@@ -155,11 +162,13 @@ footer {
 .about-box h2 {
     margin-top: 0;
     color: black;
+    font-family: 'Space Grotesk';
 }
 
 .about-box p {
     line-height: 1.6;
     color: black;
+    font-family: 'Space Grotesk';
 }
 
 
@@ -170,12 +179,7 @@ footer {
     margin-top: 20px;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
