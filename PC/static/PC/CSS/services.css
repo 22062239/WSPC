@@ -19,7 +19,7 @@ body {
 }
 
 nav {
-
+    
     top: 0;
     left: 0;
     width: 100%;
@@ -32,9 +32,6 @@ nav ol {
     display: flex;
     justify-content: center;
     list-style-type: none;
-    flex-wrap: wrap; /* Allow items to wrap to a new line */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
 }
 
 nav ol li {
@@ -100,7 +97,6 @@ a {
     text-align: center;
     padding: 100px 20px;
     font-family: 'Space Grotesk';
-     /* Adjust for the fixed nav bar */
 }
 
 .hero h1 {
@@ -123,7 +119,8 @@ a {
     flex: 1;
     margin: 20px;
     min-width: 280px;
-    font-family: 'Space Grotesk';
+    display: flex;
+    flex-direction: column;
 }
 
 .service-box {
@@ -132,28 +129,27 @@ a {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    font-family: 'Space Grotesk';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .service-item h2 {
     font-size: 2em;
     color: #007bff;
     margin-bottom: 10px;
-    font-family: 'Space Grotesk';
 }
 
 .service-item p {
     font-size: 1.1em;
     color: #555;
     margin-bottom: 20px;
-    font-family: 'Space Grotesk';
 }
 
 .service-item h3 {
     font-size: 1.5em;
     color: #007bff;
     margin-top: 20px;
-    font-family: 'Space Grotesk';
 }
 
 .service-item ul {
@@ -161,13 +157,12 @@ a {
     padding-left: 20px;
     text-align: left;
     margin-top: 10px;
-    font-family: 'Space Grotesk';
 }
 
 .service-image {
     width: 200px;
     height: 200px;
-    
+    margin: 0 auto 20px;
 }
 
 .btn {
